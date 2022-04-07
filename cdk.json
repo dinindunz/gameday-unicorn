@@ -1,0 +1,51 @@
+{
+  "app": "python3 app.py",
+  "context": {
+    "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
+    "@aws-cdk/core:enableStackNameDuplicates": "true",
+    "aws-cdk:enableDiffNoFail": "true",
+    "@aws-cdk/core:stackRelativeExports": "true",
+    "@aws-cdk/aws-ecr-assets:dockerIgnoreSupport": true,
+    "@aws-cdk/aws-secretsmanager:parseOwnedSecretName": true,
+    "@aws-cdk/aws-kms:defaultKeyPolicies": true,
+    "@aws-cdk/aws-s3:grantWriteWithoutAcl": true,
+    "@aws-cdk/aws-ecs-patterns:removeDefaultDesiredCount": true,
+    "@aws-cdk/aws-rds:lowercaseDbIdentifier": true,
+    "@aws-cdk/aws-efs:defaultEncryptionAtRest": true,
+    "@aws-cdk/aws-lambda:recognizeVersionProps": true,
+    "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true,
+    "@aws-cdk/core:newStyleStackSynthesis": true,
+    "tooling": {
+      "aws_account_id": "872203653859",
+      "aws_region": "ap-southeast-2",
+      "cdk_codepipeline_config": {
+        "repo_name": "gameday-unicorn",
+        "branch_name": "master",
+        "codepipeline_notifications": {
+          "slack_workspace_id": "T02JJ1J1KEF",
+          "slack_channel_id": "C02PVUX6DMY",
+          "enable_alexa_notifications": true,
+          "code_pipeline_events": [
+            "codepipeline-pipeline-pipeline-execution-failed",
+            "codepipeline-pipeline-pipeline-execution-canceled",
+            "codepipeline-pipeline-pipeline-execution-started",
+            "codepipeline-pipeline-pipeline-execution-resumed",
+            "codepipeline-pipeline-pipeline-execution-succeeded",
+            "codepipeline-pipeline-manual-approval-failed",
+            "codepipeline-pipeline-manual-approval-needed",
+            "codepipeline-pipeline-manual-approval-succeeded"
+          ]
+        }
+      },
+      "alexa_notification_api": "https://api.notifymyecho.com/v1/NotifyMe"
+    },
+    "dev": {
+      "aws_account_id": "872203653859",
+      "aws_region": "ap-southeast-2"
+    },
+    "prod": {
+      "aws_account_id": "872203653859",
+      "aws_region": "ap-southeast-2"
+    }
+  }
+}
